@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, XYWaveType) {
 @property (nonatomic, assign) CGFloat amplitude;  // 波浪的振幅
 @property (nonatomic, assign) CGFloat cycle;      // 波浪的周期
 @property (nonatomic, assign) CGFloat waveHeight; // 波浪的高度
-@property (nonatomic, assign) CGFloat offsetX;    // X轴位移
+
 
 
 - (void)start;

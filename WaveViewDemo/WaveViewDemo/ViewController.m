@@ -24,14 +24,17 @@
     
     _flag = YES;
     
+    // 创建正弦波浪
     XYWaveView *waveView = [[XYWaveView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
     waveView.alpha = 0.6;
+    waveView.waveColor = [UIColor redColor];
     
     waveView.waveSpeed = 0.1;
     
     [self.view addSubview:waveView];
     _waveView1 = waveView;
     
+    // 创建余弦波浪
     XYWaveView *waveView2 = [[XYWaveView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100) waveType:XYWaveTypeCosine];
     waveView2.alpha = 0.6;
     

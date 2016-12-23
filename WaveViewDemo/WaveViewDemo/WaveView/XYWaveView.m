@@ -15,10 +15,12 @@
 }
 
 @property (nonatomic, assign) XYWaveType type; // 波浪的类型
+@property (nonatomic, assign) CGFloat offsetX; // X轴位移
 
 @end
 
 @implementation XYWaveView
+@synthesize waveColor = _waveColor;
 
 #pragma mark - 初始化方法
 - (instancetype)initWithFrame:(CGRect)frame waveType:(XYWaveType)type {
@@ -103,6 +105,11 @@
 }
 
 #pragma mark - set \ get
+- (void)setWaveColor:(UIColor *)waveColor {
+    _waveColor = waveColor;
+    _shapleLayer.fillColor = waveColor.CGColor;
+}
+
 - (CGFloat)waveHeight {
     
     return _waveHeight ?: CGRectGetHeight(self.frame) * 0.5;
