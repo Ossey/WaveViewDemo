@@ -11,38 +11,35 @@
 @interface XYWaveView () {
     
     CADisplayLink *_displayLink;
-    CAShapeLayer *_shapleLayer;
 }
-
-@property (nonatomic, assign) XYWaveType type; // 波浪的类型
-@property (nonatomic, assign) CGFloat offsetX; // X轴位移
 
 @end
 
 @implementation XYWaveView
+
 @synthesize waveColor = _waveColor;
 
 #pragma mark - 初始化方法
-- (instancetype)initWithFrame:(CGRect)frame waveType:(XYWaveType)type {
+- (instancetype)initWithFrame:(CGRect)frame {
     
     if (self = [super initWithFrame:frame]) {
-        self.type = type;
+        
+        if (_shapleLayer == nil) {
+            _shapleLayer = [CAShapeLayer layer];
+            [self.layer addSublayer:_shapleLayer];
+        }
+        
         [self setup];
     }
     
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    
-    return [self initWithFrame:frame waveType:kNilOptions];
-}
-
 - (void)setup {
     
     self.backgroundColor = [UIColor clearColor];
     [self.layer setMasksToBounds:YES];
-    [self shapleLayer].fillColor = self.waveColor.CGColor;
+    _shapleLayer.fillColor = self.waveColor.CGColor;
     
     [self start];
 }
@@ -52,7 +49,7 @@
 - (void)start {
 
     if (!_displayLink) {
-        _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(startWave)];
+        _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(waveRun)];
         [_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
     }
 }
@@ -65,44 +62,16 @@
     }
 }
 
-- (void)startWave {
-    
-    self.offsetX += self.waveSpeed;
-    
-    CGMutablePathRef path = CGPathCreateMutable();
-    
-    CGFloat y = self.waveHeight;
-    
-    CGPathMoveToPoint(path, nil, 0, y);
-    
-    for (NSInteger i = 0; i <= self.waveWidth; i++) {
-        
-        if (self.type == XYWaveTypeSine) {
-            
-            // 正弦函数波浪公式
-            y = self.amplitude * sin(self.cycle  * i + self.offsetX) + self.waveHeight;
-        } else {
-        
-            // 余弦函数波浪公式
-            y = self.amplitude * cos(self.cycle  * i + self.offsetX) + self.waveHeight;
-        }
-        
-        
-        CGPathAddLineToPoint(path, nil, i, y);
-    }
-    
-    CGPathAddLineToPoint(path, nil, self.waveWidth, 0);
-    CGPathAddLineToPoint(path, nil, 0, 0);
-    
-    CGPathCloseSubpath(path);
-    [self shapleLayer].path = path;
-    
-    CGPathRelease(path);
+- (void)waveRun {
     
     if (!self.superview || !self.window) {
         [self stop];
     }
+    
+    
 }
+
+
 
 #pragma mark - set \ get
 - (void)setWaveColor:(UIColor *)waveColor {
@@ -121,15 +90,8 @@
 }
 
 - (CGFloat)amplitude {
-    if (self.type == XYWaveTypeCosine) {      // 余弦
-        _amplitude = 13;
-    } else if (self.type ==  XYWaveTypeSine) { // 正弦
-        _amplitude = 12;
-    } else {
-        _amplitude = 2;
-    }
-    
-    return _amplitude;
+
+    return _amplitude ?: 2;
 }
 
 - (UIColor *)waveColor {
@@ -144,27 +106,9 @@
 
 - (CGFloat)waveSpeed {
     
-    if (self.type == XYWaveTypeCosine) {      // 余弦
-         _waveSpeed = 0.04;
-    } else if (self.type ==  XYWaveTypeSine) { // 正弦
-        _waveSpeed = 0.02;
-    } else {
-        _waveSpeed = 1/M_PI;
-    }
-    
-    return _waveSpeed;
+    return _waveSpeed ?: 1/M_PI;
 }
 
-- (CAShapeLayer *)shapleLayer {
-    
-    if (_shapleLayer == nil) {
-        
-        _shapleLayer = [CAShapeLayer layer];
-        [self.layer addSublayer:_shapleLayer];
-        
-    }
-    return _shapleLayer;
-}
 
 
 
