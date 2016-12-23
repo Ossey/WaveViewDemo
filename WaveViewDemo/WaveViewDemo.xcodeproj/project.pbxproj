@@ -14,6 +14,7 @@
 		18586F211E0CEED90045F1C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18586F201E0CEED90045F1C4 /* Assets.xcassets */; };
 		18586F241E0CEED90045F1C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18586F221E0CEED90045F1C4 /* LaunchScreen.storyboard */; };
 		18586F2E1E0CF0660045F1C4 /* XYWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18586F2D1E0CF0660045F1C4 /* XYWaveView.m */; };
+		18586F311E0D0B9C0045F1C4 /* XYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18586F301E0D0B9C0045F1C4 /* XYViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		18586F251E0CEED90045F1C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18586F2C1E0CF0660045F1C4 /* XYWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYWaveView.h; sourceTree = "<group>"; };
 		18586F2D1E0CF0660045F1C4 /* XYWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWaveView.m; sourceTree = "<group>"; };
+		18586F2F1E0D0B9C0045F1C4 /* XYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYViewController.h; sourceTree = "<group>"; };
+		18586F301E0D0B9C0045F1C4 /* XYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				18586F181E0CEED90045F1C4 /* AppDelegate.m */,
 				18586F1A1E0CEED90045F1C4 /* ViewController.h */,
 				18586F1B1E0CEED90045F1C4 /* ViewController.m */,
+				18586F2F1E0D0B9C0045F1C4 /* XYViewController.h */,
+				18586F301E0D0B9C0045F1C4 /* XYViewController.m */,
 				18586F1D1E0CEED90045F1C4 /* Main.storyboard */,
 				18586F201E0CEED90045F1C4 /* Assets.xcassets */,
 				18586F221E0CEED90045F1C4 /* LaunchScreen.storyboard */,
@@ -166,6 +171,7 @@
 			files = (
 				18586F1C1E0CEED90045F1C4 /* ViewController.m in Sources */,
 				18586F191E0CEED90045F1C4 /* AppDelegate.m in Sources */,
+				18586F311E0D0B9C0045F1C4 /* XYViewController.m in Sources */,
 				18586F2E1E0CF0660045F1C4 /* XYWaveView.m in Sources */,
 				18586F161E0CEED90045F1C4 /* main.m in Sources */,
 			);

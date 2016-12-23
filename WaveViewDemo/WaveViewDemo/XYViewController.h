@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  XYViewController.h
 //  WaveViewDemo
 //
 //  Created by mofeini on 16/12/23.
@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface XYViewController : UIViewController
 
 @end
-
