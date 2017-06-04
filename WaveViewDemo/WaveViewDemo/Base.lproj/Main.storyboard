@@ -49,16 +49,6 @@
                     <view key="view" contentMode="scaleToFill" id="JL6-lf-uiY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3G-UM-OFi">
-                                <rect key="frame" x="131" y="224" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="Rkf-8P-3yk" kind="push" id="Lbj-ly-U6V"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="cV3-gw-sv2"/>
@@ -66,25 +56,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSD-hm-JL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1818" y="144"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Jx2-g1-y8d">
-            <objects>
-                <viewController id="Rkf-8P-3yk" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gPT-lk-trg"/>
-                        <viewControllerLayoutGuide type="bottom" id="Gfh-5H-u5C"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7xB-8u-V8s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="avF-Vn-bdi"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L8P-HK-T7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2436" y="98"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fXb-i2-4n9">

@@ -15,8 +15,6 @@
 		18586F241E0CEED90045F1C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18586F221E0CEED90045F1C4 /* LaunchScreen.storyboard */; };
 		18586F2E1E0CF0660045F1C4 /* XYWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18586F2D1E0CF0660045F1C4 /* XYWaveView.m */; };
 		18586F311E0D0B9C0045F1C4 /* XYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18586F301E0D0B9C0045F1C4 /* XYViewController.m */; };
-		18586F341E0D14320045F1C4 /* XYWaveNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18586F331E0D14320045F1C4 /* XYWaveNavigationView.m */; };
-		18586F371E0D18A50045F1C4 /* XYWaveProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18586F361E0D18A50045F1C4 /* XYWaveProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +32,6 @@
 		18586F2D1E0CF0660045F1C4 /* XYWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWaveView.m; sourceTree = "<group>"; };
 		18586F2F1E0D0B9C0045F1C4 /* XYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYViewController.h; sourceTree = "<group>"; };
 		18586F301E0D0B9C0045F1C4 /* XYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYViewController.m; sourceTree = "<group>"; };
-		18586F321E0D14320045F1C4 /* XYWaveNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYWaveNavigationView.h; sourceTree = "<group>"; };
-		18586F331E0D14320045F1C4 /* XYWaveNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWaveNavigationView.m; sourceTree = "<group>"; };
-		18586F351E0D18A50045F1C4 /* XYWaveProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYWaveProgressView.h; sourceTree = "<group>"; };
-		18586F361E0D18A50045F1C4 /* XYWaveProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWaveProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +93,6 @@
 			children = (
 				18586F2C1E0CF0660045F1C4 /* XYWaveView.h */,
 				18586F2D1E0CF0660045F1C4 /* XYWaveView.m */,
-				18586F321E0D14320045F1C4 /* XYWaveNavigationView.h */,
-				18586F331E0D14320045F1C4 /* XYWaveNavigationView.m */,
-				18586F351E0D18A50045F1C4 /* XYWaveProgressView.h */,
-				18586F361E0D18A50045F1C4 /* XYWaveProgressView.m */,
 			);
 			path = WaveView;
 			sourceTree = "<group>";
@@ -181,9 +171,7 @@
 			files = (
 				18586F1C1E0CEED90045F1C4 /* ViewController.m in Sources */,
 				18586F191E0CEED90045F1C4 /* AppDelegate.m in Sources */,
-				18586F341E0D14320045F1C4 /* XYWaveNavigationView.m in Sources */,
 				18586F311E0D0B9C0045F1C4 /* XYViewController.m in Sources */,
-				18586F371E0D18A50045F1C4 /* XYWaveProgressView.m in Sources */,
 				18586F2E1E0CF0660045F1C4 /* XYWaveView.m in Sources */,
 				18586F161E0CEED90045F1C4 /* main.m in Sources */,
 			);
@@ -305,7 +293,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P46TQQZ3AS;
 				INFOPLIST_FILE = WaveViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sey.WaveViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -318,7 +305,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P46TQQZ3AS;
 				INFOPLIST_FILE = WaveViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sey.WaveViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
